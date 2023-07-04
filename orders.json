@@ -1,0 +1,18 @@
+[
+    {
+        "dish_ids": [
+            3
+        ],
+        "id": 1,
+        "dishes": [
+            {
+                "dish_id": 3,
+                "dish_name": "pizza",
+                "price": 320,
+                "availability": "yes"
+            }
+        ],
+        "status": "Pending",
+        "total_price": 320
+    }
+]

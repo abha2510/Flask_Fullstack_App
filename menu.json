@@ -1,0 +1,14 @@
+[
+    {
+        "dish_id": 3,
+        "dish_name": "pizza",
+        "price": 320,
+        "availability": "yes"
+    },
+    {
+        "dish_id": 4,
+        "dish_name": "pizza",
+        "price": 320,
+        "availability": "yes"
+    }
+]
