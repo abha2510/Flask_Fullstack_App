@@ -5,7 +5,6 @@ import "../Css/Menu.css";
 
 const Menu = () => {
   const [menuData, setMenuData] = useState([]);
-
   useEffect(() => {
     getMenuData();
   }, []);
@@ -16,8 +15,8 @@ const Menu = () => {
       setMenuData(response.data);
     } catch (error) {
       console.error('Error retrieving menu:', error);
-    }
-  };
+    }     
+  }
 
   return (
     <div>
@@ -28,7 +27,7 @@ const Menu = () => {
                 <p>Id:{dish.dish_id}</p>
                 <h3>Name:{dish.dish_name}</h3>
                 <p>Price{dish.price}</p>
-                <p>Availability:{dish.availability}</p>
+                <p>Availability:{dish.availability}</p>             
             </div>
           
         ))}
