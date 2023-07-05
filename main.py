@@ -1,10 +1,11 @@
 import os
 import json
 from flask import Flask, request,jsonify,make_response
+from flask_cors import CORS
 
 app = Flask(__name__)
-
-
+CORS(app)
+cors = CORS(app, resources={r"/*": {"origins": "http://localhost:3001"}})
 menu_file = "menu.json"
 orders_file = "orders.json"
 
@@ -21,7 +22,6 @@ def index():
     response = make_response('Welcome')
     response.status_code = 200
     return response
-
 
 @app.route("/menu", methods=["GET"])
 def get_menu():
