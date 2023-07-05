@@ -6,9 +6,6 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 
-allowed_origins = os.environ.get("ALLOWED_ORIGINS") 
-cors = CORS(app, resources={r"/*": {"origins": allowed_origins.split(",")}})
-
 menu_file = "menu.json"
 orders_file = "orders.json"
 
@@ -144,5 +141,7 @@ def save_data():
 
 
 if __name__ == "__main__":
-    
+    allowed_origins = os.environ.get("ALLOWED_ORIGINS", "").split(",")
+    cors = CORS(app, resources={r"/*": {"origins": allowed_origins}})
+    load_data()
     app.run()
