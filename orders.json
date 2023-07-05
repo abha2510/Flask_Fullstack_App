@@ -14,5 +14,37 @@
         ],
         "status": "Pending",
         "total_price": 320
+    },
+    {
+        "dish_ids": [
+            3
+        ],
+        "id": 2,
+        "dishes": [
+            {
+                "dish_id": 3,
+                "dish_name": "pizza",
+                "price": 320,
+                "availability": "yes"
+            }
+        ],
+        "status": "Received",
+        "total_price": 320
+    },
+    {
+        "dish_ids": [
+            1
+        ],
+        "id": 3,
+        "dishes": [
+            {
+                "dish_id": 1,
+                "dish_name": "Idli",
+                "price": 52,
+                "availability": "yes"
+            }
+        ],
+        "status": "Received",
+        "total_price": 52
     }
 ]

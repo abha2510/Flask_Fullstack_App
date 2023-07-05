@@ -1,14 +1,14 @@
 [
     {
-        "dish_id": 3,
+        "dish_id": 4,
         "dish_name": "pizza",
         "price": 320,
         "availability": "yes"
     },
     {
-        "dish_id": 4,
-        "dish_name": "pizza",
-        "price": 320,
+        "dish_id": 1,
+        "dish_name": "Idli",
+        "price": 52,
         "availability": "yes"
     }
 ]

@@ -1,4 +1,4 @@
-import os
+
 import json
 from flask import Flask, request,make_response
 from flask_cors import CORS
@@ -13,9 +13,15 @@ menu = []
 orders = []
 order_id_counter = 1
 
-def clear_screen():
-    os.system("cls" if os.name == "nt" else "clear")
+def add_cors_headers(response):
+    response.headers["Access-Control-Allow-Origin"] = "*"  # Set the allowed origin(s) here
+    response.headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS"  # Set the allowed methods
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type"  # Set the allowed headers
+    return response
 
+@app.after_request
+def apply_cors_headers(response):
+    return add_cors_headers(response)
     
 @app.route('/',methods=["GET"]) 
 def index():
@@ -141,7 +147,5 @@ def save_data():
 
 
 if __name__ == "__main__":
-    allowed_origins = os.environ.get("ALLOWED_ORIGINS", "").split(",")
-    cors = CORS(app, resources={r"/*": {"origins": allowed_origins}})
     load_data()
     app.run()
