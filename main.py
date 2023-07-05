@@ -4,8 +4,10 @@ from flask import Flask, request,jsonify,make_response
 from flask_cors import CORS
 
 app = Flask(__name__)
+
 allowed_origins = os.environ.get("ALLOWED_ORIGINS") 
 cors = CORS(app, resources={r"/*": {"origins": allowed_origins.split(",")}})
+
 menu_file = "menu.json"
 orders_file = "orders.json"
 
