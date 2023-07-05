@@ -11,12 +11,13 @@ const AddItems = () => {
       e.preventDefault();
       try {
         const response = await axios.post('https://flaskbackendapp.onrender.com/add', {
-          dish_id:dishid,
+          dish_id:+dishid,
           dish_name: dishName,
           price: price,
           availability: availability,
         });
         console.log(response.data);
+        alert('Congratulation'+response.data);
         
       } catch (error) {
         console.error('Error adding dish:', error);
